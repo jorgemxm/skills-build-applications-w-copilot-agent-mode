@@ -1,0 +1,486 @@
+* {
+  transition: all 0.3s ease;
+}
+
+body {
+  background: linear-gradient(160deg, #d8f3dc 0%, #b7e4c7 40%, #caf0f8 100%);
+  color: #1b4332;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===================== DINO THEME PALETTE ===================== */
+/* T-Rex green:     #52b788 / #40916c / #2d6a4f                 */
+/* Stego orange:    #f4a261 / #e76f51 / #c1440e                 */
+/* Bronto blue:     #219ebc / #0077b6 / #023e8a                 */
+/* Sandy yellow:    #e9c46a / #f4d58d                           */
+/* Background:      #d8f3dc / #b7e4c7 / #caf0f8                 */
+/* ============================================================= */
+
+/* Dino Welcome Scene */
+.octofit-welcome {
+  text-align: center;
+  padding: 48px 20px 32px;
+  background: linear-gradient(160deg, #d8f3dc 0%, #caf0f8 100%);
+  border-radius: 20px;
+  margin-bottom: 2rem;
+  border: 2px solid #b7e4c7;
+  overflow: hidden;
+  position: relative;
+}
+
+.octofit-welcome::before {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 28px;
+  background: repeating-linear-gradient(90deg, #52b788 0px, #52b788 18px, #40916c 18px, #40916c 36px);
+  opacity: 0.35;
+  border-radius: 0 0 18px 18px;
+}
+
+.dino-scene {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.welcome-text-block {
+  flex: 1;
+  min-width: 260px;
+  max-width: 520px;
+}
+
+.octofit-welcome h1 {
+  color: #1b4332;
+  font-weight: 900;
+  font-size: 2.4rem;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+  text-shadow: 1px 2px 0 #b7e4c7;
+}
+
+.octofit-welcome p {
+  color: #40916c;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.dino-footer-scene {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.dino-ground-text {
+  display: flex;
+  align-items: center;
+}
+
+.dino-tag {
+  background: #40916c;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.85rem;
+  padding: 6px 18px;
+  border-radius: 20px;
+}
+
+.dino-svg {
+  display: block;
+  filter: drop-shadow(2px 4px 6px rgba(27,67,50,0.15));
+}
+
+.dino-stego-flip {
+  transform: scaleX(-1);
+}
+
+/* Dino bounce animations */
+@keyframes dino-bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+@keyframes dino-bob-delay {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+.dino-trex { animation: dino-bob 2.8s ease-in-out infinite; }
+.dino-bronto { animation: dino-bob 3.5s ease-in-out infinite; }
+.dino-stego { animation: dino-bob-delay 4s ease-in-out infinite; }
+
+/* ===================== DINO BUTTONS ===================== */
+.btn-dino-green {
+  background: #52b788;
+  color: #fff;
+  border: none;
+  font-weight: 700;
+  border-radius: 10px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 0 #2d6a4f;
+}
+.btn-dino-green:hover { background: #40916c; color: #fff; transform: translateY(-2px); box-shadow: 0 6px 0 #2d6a4f; }
+
+.btn-dino-orange {
+  background: #f4a261;
+  color: #fff;
+  border: none;
+  font-weight: 700;
+  border-radius: 10px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 0 #c1440e;
+}
+.btn-dino-orange:hover { background: #e76f51; color: #fff; transform: translateY(-2px); box-shadow: 0 6px 0 #c1440e; }
+
+.btn-dino-blue {
+  background: #219ebc;
+  color: #fff;
+  border: none;
+  font-weight: 700;
+  border-radius: 10px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 0 #023e8a;
+}
+.btn-dino-blue:hover { background: #0077b6; color: #fff; transform: translateY(-2px); box-shadow: 0 6px 0 #023e8a; }
+
+.btn-dino-yellow {
+  background: #e9c46a;
+  color: #1b4332;
+  border: none;
+  font-weight: 700;
+  border-radius: 10px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 0 #c9a227;
+}
+.btn-dino-yellow:hover { background: #f4d58d; color: #1b4332; transform: translateY(-2px); box-shadow: 0 6px 0 #c9a227; }
+
+.btn-dino-red {
+  background: #e76f51;
+  color: #fff;
+  border: none;
+  font-weight: 700;
+  border-radius: 10px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 0 #9d0208;
+}
+.btn-dino-red:hover { background: #c1440e; color: #fff; transform: translateY(-2px); box-shadow: 0 6px 0 #9d0208; }
+
+
+/* Navbar Styling */
+.octofit-navbar {
+  background: linear-gradient(90deg, #1a1a2e 0%, #16213e 100%) !important;
+  box-shadow: 0 4px 15px rgba(233, 69, 96, 0.2);
+  padding: 0.8rem 0;
+}
+
+.octofit-navbar .navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #e94560 !important;
+  font-weight: 800;
+  font-size: 1.5rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.octofit-navbar .navbar-brand img {
+  height: 45px;
+  width: 45px;
+  filter: drop-shadow(0 2px 4px rgba(233, 69, 96, 0.3));
+}
+
+.octofit-navbar .nav-link {
+  color: #d4d4d4 !important;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 0.5rem 1rem !important;
+}
+
+.octofit-navbar .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #e94560, #ffd700);
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+.octofit-navbar .nav-link:hover::after,
+.octofit-navbar .nav-link.active::after {
+  width: 80%;
+}
+
+.octofit-navbar .nav-link:hover {
+  color: #ffd700 !important;
+}
+
+.octofit-navbar .nav-link.active {
+  color: #e94560 !important;
+}
+
+/* Cards Styling */
+.octofit-card {
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(26, 26, 46, 0.12);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.octofit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(233, 69, 96, 0.2);
+}
+
+.octofit-card .card-header {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  color: #fff;
+  border-radius: 16px 16px 0 0 !important;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.octofit-card .card-header span {
+  font-size: 1.5rem;
+}
+
+.octofit-card .card-body {
+  padding: 0 !important;
+}
+
+/* Table Styling */
+.octofit-table {
+  margin-bottom: 0 !important;
+}
+
+.octofit-table thead {
+  background: linear-gradient(135deg, #e94560 0%, #c91e47 100%);
+  color: #fff;
+}
+
+.octofit-table thead th {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: none;
+  padding: 1rem;
+}
+
+.octofit-table tbody td {
+  border-color: #e8eef7;
+  padding: 0.9rem 1rem;
+  vertical-align: middle;
+}
+
+.octofit-table tbody tr {
+  transition: all 0.2s ease;
+}
+
+.octofit-table tbody tr:hover {
+  background: linear-gradient(90deg, rgba(233, 69, 96, 0.05), rgba(255, 215, 0, 0.05));
+}
+
+.octofit-table tbody tr:nth-child(even) {
+  background-color: #f8f9fc;
+}
+
+/* Badge Styling */
+.badge {
+  padding: 0.4rem 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+.badge.bg-danger {
+  background: linear-gradient(135deg, #e94560, #c91e47) !important;
+}
+
+/* Welcome Section */
+.octofit-welcome {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, rgba(233, 69, 96, 0.05) 0%, rgba(255, 215, 0, 0.05) 100%);
+  border-radius: 16px;
+  margin-bottom: 2rem;
+}
+
+.octofit-welcome h1 {
+  color: #1a1a2e;
+  font-weight: 800;
+  font-size: 2.8rem;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.octofit-welcome p {
+  color: #555;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+/* Button Styling */
+.btn {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: 8px;
+  padding: 0.6rem 1.4rem;
+  transition: all 0.3s ease;
+}
+
+.btn-danger {
+  background: linear-gradient(135deg, #e94560, #c91e47);
+  border: none;
+  box-shadow: 0 4px 12px rgba(233, 69, 96, 0.3);
+}
+
+.btn-danger:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(233, 69, 96, 0.4);
+  background: linear-gradient(135deg, #c91e47, #b01a41);
+}
+
+.btn-outline-dark {
+  color: #1a1a2e;
+  border: 2px solid #1a1a2e;
+  font-weight: 700;
+}
+
+.btn-outline-dark:hover {
+  background: linear-gradient(135deg, #e94560, #c91e47);
+  border-color: #e94560;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Text Styling */
+h1, h2, h3, h4, h5, h6 {
+  color: #1a1a2e;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.fw-semibold {
+  font-weight: 700;
+  color: #1a1a2e;
+}
+
+.text-muted {
+  color: #999 !important;
+  font-style: italic;
+}
+
+/* ===================== DINO CARD HEADERS ===================== */
+.dino-header-green {
+  background: linear-gradient(135deg, #2d6a4f 0%, #40916c 100%) !important;
+  color: #fff;
+  border-radius: 16px 16px 0 0 !important;
+  font-size: 1.3rem;
+  font-weight: 700;
+  padding: 1.1rem 1.2rem;
+  border-bottom: 3px solid #52b788;
+}
+
+.dino-header-orange {
+  background: linear-gradient(135deg, #c1440e 0%, #e76f51 100%) !important;
+  color: #fff;
+  border-radius: 16px 16px 0 0 !important;
+  font-size: 1.3rem;
+  font-weight: 700;
+  padding: 1.1rem 1.2rem;
+  border-bottom: 3px solid #f4a261;
+}
+
+.dino-header-blue {
+  background: linear-gradient(135deg, #023e8a 0%, #0077b6 100%) !important;
+  color: #fff;
+  border-radius: 16px 16px 0 0 !important;
+  font-size: 1.3rem;
+  font-weight: 700;
+  padding: 1.1rem 1.2rem;
+  border-bottom: 3px solid #219ebc;
+}
+
+.dino-header-yellow {
+  background: linear-gradient(135deg, #c9a227 0%, #e9c46a 100%) !important;
+  color: #1b4332;
+  border-radius: 16px 16px 0 0 !important;
+  font-size: 1.3rem;
+  font-weight: 700;
+  padding: 1.1rem 1.2rem;
+  border-bottom: 3px solid #f4d58d;
+}
+
+.dino-header-red {
+  background: linear-gradient(135deg, #9d0208 0%, #c1440e 100%) !important;
+  color: #fff;
+  border-radius: 16px 16px 0 0 !important;
+  font-size: 1.3rem;
+  font-weight: 700;
+  padding: 1.1rem 1.2rem;
+  border-bottom: 3px solid #e76f51;
+}
+
+/* Update card hover to use dino green accent */
+.octofit-card:hover {
+  box-shadow: 0 10px 30px rgba(64, 145, 108, 0.25) !important;
+}
+
+/* Dino-themed table accents */
+.octofit-table thead {
+  background: linear-gradient(135deg, #2d6a4f 0%, #40916c 100%) !important;
+}
+
+.octofit-table tbody tr:hover {
+  background: linear-gradient(90deg, rgba(82, 183, 136, 0.08), rgba(33, 158, 188, 0.08)) !important;
+}
+
+/* Navbar dino theme */
+.octofit-navbar {
+  background: linear-gradient(90deg, #1b4332 0%, #2d6a4f 100%) !important;
+  box-shadow: 0 4px 15px rgba(27, 67, 50, 0.3) !important;
+}
+
+.octofit-navbar .navbar-brand {
+  color: #95d5b2 !important;
+}
+
+.octofit-navbar .nav-link {
+  color: #d8f3dc !important;
+}
+
+.octofit-navbar .nav-link:hover {
+  color: #e9c46a !important;
+}
+
+.octofit-navbar .nav-link.active {
+  color: #95d5b2 !important;
+}
+
+.octofit-navbar .nav-link::after {
+  background: linear-gradient(90deg, #95d5b2, #e9c46a) !important;
+}
